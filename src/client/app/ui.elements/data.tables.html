@@ -1,0 +1,23 @@
+<h1>Data tables</h1>
+
+<table class="table table-striped table-bordered table-hover dataTable">
+  <thead>
+    <tr>
+      <th ng-class="{'sorting' : vm.sortedBy['engine']==undefined,'sorting_asc' : vm.sortedBy['engine']=='asc','sorting_desc' : vm.sortedBy['engine']=='desc'}" ng-click="vm.sort('engine')">Engine</th>
+      <th ng-class="{'sorting' : vm.sortedBy['browser']==undefined,'sorting_asc' : vm.sortedBy['browser']=='asc','sorting_desc' : vm.sortedBy['browser']=='desc'}" ng-click="vm.sort('browser')">Browser</th>
+      <th ng-class="{'sorting' : vm.sortedBy['plattform']==undefined,'sorting_asc' : vm.sortedBy['plattform']=='asc','sorting_desc' : vm.sortedBy['plattform']=='desc'}" ng-click="vm.sort('plattform')">Plattform</th>
+      <th ng-class="{'sorting' : vm.sortedBy['version']==undefined,'sorting_asc' : vm.sortedBy['version']=='asc','sorting_desc' : vm.sortedBy['version']=='desc'}" ng-click="vm.sort('version')">Version</th>
+      <th ng-class="{'sorting' : vm.sortedBy['grade']==undefined,'sorting_asc' : vm.sortedBy['grade']=='asc','sorting_desc' : vm.sortedBy['grade']=='desc'}" ng-click="vm.sort('grade')">Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="entry in vm.data">
+      <td>{{entry.engine}}</td>
+      <td>{{entry.browser}}</td>
+      <td>{{entry.plattform}}</td>
+      <td>{{entry.version}}</td>
+      <td>{{entry.grade}}</td>
+    </tr>
+  </tbody>
+</table>
+        

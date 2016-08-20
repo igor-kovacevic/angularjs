@@ -19,7 +19,7 @@
   <!-- build:css styles/lib.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -31,58 +31,64 @@
 </head>
 
 <body>
-   <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-            
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <a class="navbar-brand" href="#">Project name</a>
       </div>
-    </nav>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
 
-    <div class="container">
-
-      <div class="jumbotron">
-        <div ui-view></div>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Elements <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ui-sref-active="active"><a ui-sref="datatables">Data tables</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Custom</li>
+              <li><a href="#">Entry</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-right">
+          <li>
+            <a href="login.html">
+              <i class="fa fa-sign-out"></i> Log out
+            </a>
+          </li>
+        </ul>
       </div>
 
       
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
 
-    </div> <!-- /container -->
+
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <div ui-view></div>
+    </div>
+
+
+
+  </div>
+  <!-- /container -->
 
 
 
 
-  
+
 
 
 
@@ -94,12 +100,12 @@
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
   <script src="/bower_components/moment/moment.js"></script>
   <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="/bower_components/toastr/toastr.js"></script>
   <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <script src="/bower_components/ng-lodash/build/ng-lodash.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -109,11 +115,14 @@
   <script src="/src/client/app/common/router/router.module.js"></script>
   <script src="/src/client/app/core/core.module.js"></script>
   <script src="/src/client/app/home/home.module.js"></script>
+  <script src="/src/client/app/ui.elements/ui.elements.module.js"></script>
   <script src="/src/client/app/common/router/router-helper.provider.js"></script>
   <script src="/src/client/app/core/core.route.js"></script>
   <script src="/src/client/app/home/home.controller.js"></script>
   <script src="/src/client/app/home/home.route.js"></script>
   <script src="/src/client/app/services/dataservice.js"></script>
+  <script src="/src/client/app/ui.elements/ui.elements.controller.js"></script>
+  <script src="/src/client/app/ui.elements/ui.elements.route.js"></script>
   <!-- endinject -->
 
   <!-- inject:templates:js -->

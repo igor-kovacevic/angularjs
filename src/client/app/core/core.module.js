@@ -5,6 +5,6 @@
     .module('app.core', [
       'ngAnimate', 'ngSanitize',
       'common.router',
-      'ui.router', 'ngplus'
+      'ui.router','ngLodash'
     ]);
 })();
