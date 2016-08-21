@@ -5,6 +5,6 @@
     .module('app.core', [
       'ngAnimate', 'ngSanitize',
       'common.router',
-      'ui.router','ngLodash'
+      'ui.router','ngLodash','angularUtils.directives.dirPagination'
     ]);
 })();
