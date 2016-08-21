@@ -11,12 +11,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr dir-paginate="entry in vm.data | itemsPerPage: 10">
-      <td>{{entry.engine}}</td>
-      <td>{{entry.browser}}</td>
-      <td>{{entry.plattform}}</td>
-      <td>{{entry.version}}</td>
-      <td>{{entry.grade}}</td>
+    <tr dir-paginate="entry in vm.data | itemsPerPage: 5">
+      <td><entry edit="true" data="entry.engine"></entry></td>
+      <td><entry edit="true" data="entry.browser"></entry></td>
+      <td><entry edit="true" data="entry.browser"></entry></td>
+      <td><entry edit="true" data="entry.version"></entry></td>
+      <td><entry edit="true" data="entry.grade"></entry></td>
     </tr>
   </tbody>
 </table>

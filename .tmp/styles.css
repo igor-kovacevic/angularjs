@@ -644,3 +644,29 @@ div.dtr-modal div.dtr-modal-background {
     width: 95%;
   }
 }
+.entry {
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+.entry:hover {
+  cursor: pointer;
+}
+.entry::-moz-selection {
+  background: #76C000;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+.entry::selection {
+  background: #76C000;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+td.focus {
+  border: 1px solid #76C000 !important;
+  color: #76C000;
+}
+entry > input {
+  outline: none;
+}
